@@ -10,6 +10,15 @@ namespace WorkFlowEngineUsingInterfaces
     {
         static void Main(string[] args)
         {
+            WorkFlow w = new WorkFlow();
+
+            w.AddActivities(new Email());
+            w.AddActivities(new DataBase());
+            w.AddActivities(new WebService());
+            w.AddActivities(new CloudStorage());
+
+            w.ShowWorkFlow();
+
         }
     }
 }
